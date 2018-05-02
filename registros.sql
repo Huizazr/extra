@@ -83,10 +83,11 @@ INSERT INTO `destino` (`id_destino`, `nombre`, `id_horario`) VALUES
 --
 
 CREATE TABLE `horario` (
-  `id_horario` int(11) NOT NULL,
-  `hora_llegada` int(11) NOT NULL,
-  `hora_salida` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  'id_horario' int(11) NOT NULL,
+  'hora_llegada' int(11) NOT NULL,
+  'hora_salida' int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latinl;
+  
 
 -- --------------------------------------------------------
 
