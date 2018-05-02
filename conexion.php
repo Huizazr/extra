@@ -12,3 +12,4 @@ if (!$conexion) {
 ?>
 
 Editado papu
+pedro valdiviezo
