@@ -10,3 +10,5 @@ if (!$conexion) {
 	die("Error: " . mysqli_connect_error());
 }
 ?>
+
+Editado papu
