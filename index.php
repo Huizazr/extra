@@ -46,6 +46,13 @@
 	  
     </table>
   </form>
-  <center>Nuevo usuario</center>
+  
+  <center>
+  
+  <li><a href="registro.php">Nuevo usuario</a></li>
+  
+  </center>
+  
+ 
   </body>
   </html>
