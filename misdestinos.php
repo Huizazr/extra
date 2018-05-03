@@ -1,62 +1,52 @@
+<!DOCTYPE html>
 <?php
 session_start();
-if (!isset($_SESSION['matricula'])) {
-	header("Location:index.php");
-
-}else {
-	include('menu.php');
-	include('conexion.php');
-}
-
 ?>
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Usuario</title>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+   
+	<title>DESTINOS</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-</head>
-<body>	
-	<h5 style="margin: auto;">Bienvenido <?php echo $_SESSION['nombre']?> <?php echo $_SESSION['apellido']?></h5>
 	
-	
-	<br><br>
-	
-	<?php
+   </head>
+ <body>
 
-	if ($conexion) {
-		
-		$sel=$_SESSION['sel'];
-		
-		$query = "SELECT * FROM reserva WHERE id_usuario = $sel";
+<?php
+$host_db = "localhost";
+$user_db = "root";
+$pass_db = "";
+$db_name = "registros";
+$tbl_name = "destino";
+$conexion = new mysqli($host_db, $user_db, $pass_db, $db_name);
+$consulta = "SELECT * FROM horario";
+$resultado = $conexion -> query($consulta);
+  echo "  <center>
+      <h1> DESTINOS DE VUELOS</h1>
+      <table>
+      <tr><th>Id destinos</th>      
+      <th>Nombre</th>
+	  <th>Modificar</th>
+	  <th>Borrar Registro</th>
+	  </tr>"; 
+	  
+while($row = $resultado -> fetch_array())
+{
+  $id_destino = $row["id_destino"];
+  $nombre = $row["Nombre"];
+ 
+  echo "
+  <tr><td>".$row['id_destino']."</td>
+  <td>".$row['nombre']."</td>
+  <td><a href='UPDATE1.php?ID=".$row['id_destino']."'>Modificar Registro</a></td>
+  <td><a href='DELETE.php?ID=".$row['id_destino']."'>Borrar Registro</a></td>";
+  
+  
+}
+echo "</table></center>";
+mysqli_close($conexion);
+ ?>
 
-		$resultado = mysqli_query($conexion, $query);
-		if (mysqli_num_rows($resultado) > 0)
-		{						
-			echo "<table style='margin: auto; width: 50%'><tr><th>vuelo</th><th>folio de cliente</th><th>estado</th></tr>";
-
-			while ($row = mysqli_fetch_assoc($resultado)) 
-			{		
-		$_SESSION['estado'] = $row['estado'];
-		
-		if($_SESSION['estado'] == "1"){
-				echo "<tr><td>$row[id_vuelo]</td><td>$row[id_destino]</td><td>activo</td></tr>";					
-		}
-		else{
-			echo "<tr><td>$row[id_vuelo]</td><td>$row[id_destino]</td><td>inactivo</td></tr>";		
-		}
-				
-			}}
-			echo "</table>	";	
-
-		}
-		else 	
-		{
-			echo "No hay entradas";
-		}
-		
-	?>
-</body>
-</html>
-	
-</body>
+  </body>
 </html>
