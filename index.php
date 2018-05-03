@@ -44,14 +44,12 @@
       </tr>
 	  
     </table>
-  </form>
+	  <center>
+	  <a href="registro.php">Nuevo usuario</a>
+	  </center>
+		  </form>
   
-  <center>
-  
-  <a href="registro.php">Nuevo usuario</a>
-  
-  </center>
-  
+
  
   </body>
   </html>
