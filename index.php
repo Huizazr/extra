@@ -49,7 +49,7 @@
   
   <center>
   
-  <li><a href="registro.php">Nuevo usuario</a></li>
+  <a href="registro.php">Nuevo usuario</a>
   
   </center>
   
