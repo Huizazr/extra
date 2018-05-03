@@ -26,9 +26,11 @@
 </head>
 <body>
   <form method="post" action="login.php">
-    <table class="abajo" style="width: 33%">
+   <center><p><font size="7" face="Arial Rounded MT Bold" color="#808080">
+	Aerolíneas Martín</font> </p></center>
+    <table class="abajo" style="width: 30%">
       <tr>
-        <th class="A2" colspan="2">Aerolineas Martin </th>
+        <th class="A2" colspan="2">Inicio</th>
       </tr>
       <tr>
         <td class="A1" style="text-align: right;">Usuario:</td>
@@ -44,11 +46,21 @@
       </tr>
 	  
     </table>
-		  </form>
+    </form>
 	  
 	 <center>
 	  <a href="registro.php"><input type="button"value="Nuevo usuario"</a>
 	  </center>
+  
+
+ 
+  
+
+ 
+  </a>
+<center><p><img src="avion2.jpg" width="644" height="272"></p></center>
+
+ 
   
 
  
