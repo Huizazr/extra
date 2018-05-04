@@ -27,24 +27,19 @@ $resultado = $conexion -> query($consulta);
       <table>
       <tr><th>Id horario</th>      
       <th>Hora de llegada</th>
-      <th>Hora de Salida</th>
-	  <th>Modificar</th>
-	  <th>Borrar Registro</th>
-	  </tr>"; 
+      <th>Hora de Salida</th></tr>"; 
 	  
-while($row = $resultado -> fetch_array())
+while($fila = $resultado -> fetch_array())
 {
-  $id_horario = $row["id_horario"];
-  $hora_llegada = $row["hora_llegada"];
-  $hora_salida = $row["hora_salida"];
+  $id_horario = $fila["id_horario"];
+  $hora_llegada = $fila["hora_llegada"];
+  $hora_salida = $fila["hora_salida"];
   echo "
-  <tr><td>".$row['id_horario']."</td>
-  <td>".$row['hora_llegada']."</td>
-  <td>".$row['hora_salida']."</td>
-  <td><a href='UPDATE1.php?ID=".$row['id_horario']."'>Modificar Registro</a></td>
-  <td><a href='DELETE.php?ID=".$row['id_horario']."'>Borrar Registro</a></td>";
-  
-  
+  <tr>
+  <td >$id_horario</td>
+  <td>$hora_llegada</td>
+  <td>$hora_salida</td>
+  </tr> ";
 }
 echo "</table></center>";
 mysqli_close($conexion);

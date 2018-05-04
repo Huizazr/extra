@@ -1,57 +1,29 @@
+﻿
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>REGISTRO DE NUEVOS USUARIOS</title>
-	</head>
-<body>
-	<form action="#" method="post">
-		<p><input name="id_usuario" type="tex" placeholder="ID USUARIO"></p>
-		<p><input name="nombre" type="tex" placeholder="NOMBRE" ></p>
-		<p><input name="apellido" type="tex" placeholder="APELLIDO"></p>
-		<p><input name="user" type="tex" placeholder="USUARIO"></p>
-		<P><input name="tipo" type="tex" placeholder="TIPO DE USUARIO"></P>
-		<P><input name="password" type="tex" placeholder="PASSWORD"></P>
-		<input type="submit" name="agregar" value ="agregar">
-	</form>
-	
-	<?php
-	
-	
-$connect=mysqli_connect("localhost","admin","linux1357","registros");
-if ($connect) {
-		echo "--------------------------------------------------. <br />";
-		$a= $_POST ['id_usuario'];
-		$b= $_POST ['nombre'];
-		$c= $_POST ['apellido'];
-		$d= $_POST ['user'];
-		$e= $_POST ['tipo'];
-		$f= $_POST ['password'];
+<head> 
+	<title>Regstrar</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>	<center>
+	<h1><font face="Arial Rounded MT Bold" color="#808080">Registro Nuevo 
+	Usuario</font></h1>
+	<form action="registro2.php" method="post">
 		
+		Nombre: <input type="text" name="Nombre" required=""><br><br>
+		Apellido: <input type="text" name="Apellido" required=""><br><br>
+		user: <input type="number" name="user" required=""><br><br>
+		password: <input type="text" name="pass" required=""><br><br>
+		Destino: <select name="tipo" required="">
+			<option value="" disabled="" selected=""></option>
+			<option value="1">Primera clase</option>
+			<option value="2">Segunda clase</option>
+			<option value="3">Tercera clase</option>
+		</select><br><br>
+		<input type="submit" name="Registrar" value="Continuar">
 		
-		$consulta="insert into usuarios values ('$a','$b','$c','$d','$e','$f')";
-		
-		$resultado=mysqli_query($connect,$consulta);
-		
-		if ($resultado) {
-			echo "Perfil: <br />";
-			echo "Almacenado <br />";
-		}
-		else {
-			echo "error en la ejecución de la consulta. <br />";
-		}
-		
-		if (mysqli_close($connect)){ 
-			echo "-. <br />";
-			
-			
-		} 
-		else {
-			echo "error en la desconexión";
-		}
-}
+	</form></center>
+<center><p><img src="hotel.jpg" width="948" height="272"></p></center>
 
-?>
-	
 </body>
 </html>
-

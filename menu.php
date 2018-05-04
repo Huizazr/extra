@@ -25,12 +25,13 @@
             <a class="dropdown-toggle" href="regviaje.php">Nuevo viaje</a>
           </li>
 
+
            <li class="dropdown">
             <a class="dropdown-toggle" href="mishorarios.php">Mis horarios</a>
           </li>
 		  
 		<li class="dropdown">
-            <a class="dropdown-toggle" href="misvuelos.php">Mis vuelos</a>
+            <a class="dropdown-toggle" href="vuelos.php">Mis vuelos</a>
           </li>
 		<li class="dropdown">
             <a class="dropdown-toggle" href="misdestinos.php">Mis destinos</a>

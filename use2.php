@@ -27,7 +27,7 @@ if (!isset($_SESSION['matricula'])) {
 		
 		$sel=$_SESSION['sel'];
 		
-		$query = "SELECT * FROM reserva WHERE id_usuario = $sel";
+		$query = "SELECT * FROM reservados WHERE id_usuario = $sel";
 
 		$resultado = mysqli_query($conexion, $query);
 		if (mysqli_num_rows($resultado) > 0)

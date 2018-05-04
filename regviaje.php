@@ -35,6 +35,10 @@ if (!isset($_SESSION['matricula'])) {
 			<option value="2">Monterrey</option>
 			<option value="3">Guadalajara</option>
 		</select><br><br>
+		Hora de llegada: <input type="time" name="horalle" size="20" />
+		Hora de salida: <input type="time" name="horasa" size="20" /></br></br>
+		
+		
 		<input type="submit" name="Registrar" value="Continuar">
 		
 	</form></center>
